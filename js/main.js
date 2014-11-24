@@ -1,14 +1,13 @@
-$(document).ready(function() {
+var counter = 0;
 
-
-    for (i = 0; i < 10; i++) {
-        $('td').on("click", function () {
-            if (i % 2 == 0) {
-                $(this).html("X");
-            } else {
-                $(this).html("O");
-            }
-        });
-
+$('td').on("click", function() {
+    if (counter % 2 == 0 ) {
+        $(this).html("X");
+        counter++;
+        $('#counter').text(counter);
+    } else {
+        $(this).html("O");
+        counter++;
+        $('#counter').text(counter);
     }
 });
